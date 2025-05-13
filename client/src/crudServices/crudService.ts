@@ -3,7 +3,7 @@
 export const crudService = {
   
   fetch: async <T = any>(baseUrl: string, queryParams?: string): Promise<T> => {
-    const apiUrl = "https://taskboard-application-ruby.vercel.app" + baseUrl;
+    const apiUrl = "https://taskboard-application-k-rahuls-projects.vercel.app" + baseUrl;
     const url = queryParams ? `${apiUrl}?${queryParams}` : apiUrl;
     const res = await fetch(url);
     if (!res.ok) throw new Error(await res.text());
@@ -11,7 +11,7 @@ export const crudService = {
   },
 
   create: async <T = any>(baseUrl: string, payload: any): Promise<T> => {
-    const apiUrl = "https://taskboard-application-ruby.vercel.app" + baseUrl;
+    const apiUrl = "https://taskboard-application-k-rahuls-projects.vercel.app" + baseUrl;
     const res = await fetch(apiUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -22,7 +22,7 @@ export const crudService = {
   },
 
   update: async <T = any>(baseUrl: string, payload: any): Promise<T> => {
-    const apiUrl = "https://taskboard-application-ruby.vercel.app" + baseUrl;
+    const apiUrl = "https://taskboard-application-k-rahuls-projects.vercel.app" + baseUrl;
     const res = await fetch(apiUrl, {
       method: 'PUT',
       headers: { 'Content-Type': 'application/json' },
@@ -33,7 +33,7 @@ export const crudService = {
   },
 
   delete: async <T = any>(baseUrl: string, payload: any): Promise<T> => {
-    const apiUrl = "https://taskboard-application-ruby.vercel.app" + baseUrl;
+    const apiUrl = "https://taskboard-application-k-rahuls-projects.vercel.app" + baseUrl;
     const res = await fetch(apiUrl, {
       method: 'DELETE',
       headers: { 'Content-Type': 'application/json' },
